@@ -5,9 +5,9 @@ class Banner{
 
     //Constructor with DB
     public function __construct(){
-        $servername ="localhost";
+        $servername ="db";
         $username ="root";
-        $password="";
+        $password="password";
         $dbname="dev_profile";
 
 
