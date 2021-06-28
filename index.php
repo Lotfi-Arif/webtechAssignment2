@@ -134,12 +134,12 @@
     <!-- End of Welcome Message -->
 
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <!-- Video Conference -->
+      <!-- Banner Management -->
       <div
         class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"
       >
         <div class="my-3 py-3">
-          <h2 class="display-5">Video Conference</h2>
+          <h2 class="display-5">Banner Management done with native PHP</h2>
           <p class="lead">Prepared by Lotfi Arif</p>
         </div>
         <div
@@ -147,46 +147,28 @@
           style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
         ></div>
       </div>
-      <!-- End of Video Conference -->
-
-      <!-- Text Messaging & File Sharing -->
-      <div
-        class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
-      >
-        <div class="my-3 p-3">
-          <h2 class="display-5">Text Messaging & File Sharing</h2>
-          <p class="lead">Prepared by Khaled Ahmed</p>
-        </div>
-        <div
-          class="bg-dark box-shadow mx-auto"
-          style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
-        ></div>
-      </div>
-      <!-- End of Text Messaging & File Sharing -->
+      <!-- End of Event Scheduler & Notification -->
     </div>
+    <div
+      class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light"
+    >
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Assignment 4</h1>
+        <p class="lead font-weight-normal">
+          Web Technology - SCSJ3483 (Section 01)
+        </p>
+        <p class="text-muted">Lotfi Arif, Khaled Ahmed</p>
+      </div>
+    </div>
+    <!-- End of Welcome Message -->
 
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <!-- Event Scheduler & Notification -->
-      <div
-        class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
-      >
-        <div class="my-3 p-3">
-          <h2 class="display-5">Event Scheduler & Notification</h2>
-          <p class="lead">Prepared by Khaled Ahmed</p>
-        </div>
-        <div
-          class="bg-dark box-shadow mx-auto"
-          style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
-        ></div>
-      </div>
-      <!-- End of Event Scheduler & Notification -->
-
       <!-- Banner Management -->
       <div
         class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"
       >
         <div class="my-3 py-3">
-          <h2 class="display-5">Banner Management</h2>
+          <h2 class="display-5">Banner Management done with NestJs framework</h2>
           <p class="lead">Prepared by Lotfi Arif</p>
         </div>
         <div

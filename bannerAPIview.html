@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambition Assignment3 - Banner Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="Modal" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true" style="width: 600px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: white; width: 1400px;">
+                    <h5 class="modal-title" id="ModalLabel" style="color: white;">Assignment 3 by Lotfi Anwar Arif - A18CS4043 </h5><br>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: white;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="background-color: white; width: 1400px;">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3" style="color: black;">Insert image Link
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" id="banner-url-1" aria-describedby="basic-addon3">
+                    </div>
+                </div>
+                <div class="modal-footer" style="background-color: white; width: 1400px;">
+                    <button type="button" class="btn btn-secondary" onclick="bannerInsert();">Click here to add the
+                        link</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="mx-auto" style="width: 200px;">
+        <button type="button" class="btn btn-secondary" onclick="getBannerLinks()">Show banner number and banner links
+        </button>
+    </div>
+
+
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" style="color: black;">Image No</th>
+                    <th scope="col" style="color: black; ">Banner Image Link</th>
+                </tr>
+            </thead>
+            <tbody id="insertData">
+            </tbody>
+        </table>
+    </div>
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function bannerInsert() {
+
+        var links = {
+            "img1": $('#banner-url-1').val(),
+        };
+
+        if (links.img1 == "") {
+            alert("Please add a banner link");
+        } else {
+            $.ajax({
+                url: "BannerRestController.php?action=id",
+                method: "POST",
+                data: JSON.stringify(links),
+                dataType: "json",
+                encode: true,
+                processData: false,
+                headers: {
+                    'Content-Type': "application/json"
+                },
+                success: (resultsJSON) => {
+                    //this
+                    // $('#result').html(resultsJSON[0].message);
+
+                },
+                error: err => console.error(err)
+            })
+        }
+    }
+
+    function getBannerLinks() {
+
+        $.ajax({
+            url: "BannerRestController.php?action=all",
+            method: "GET",
+            encode: true,
+            processData: false,
+            headers: {
+                'Content-Type': "application/json"
+            },
+            success: (resultsJSON) => {
+
+                var i = 0;
+                var imageLink = new Array();
+
+                resultsJSON.map(image => {
+                    $('#insertData').append('<tr><td style="color: black; ">' + image.id + '</td>' + '<td style="color: black; ">' + image.imageLink + '</td></tr>');
+                    imageLink[i] = image.imageLink;
+                    i++;
+                });
+
+
+                for (i = 0; i < 3; i++) {
+                    $('#img_1').attr('src', imageLink[imageLink.length - 1]);
+                }
+
+            },
+            error: err => console.error(err)
+        })
+    }
+</script>
+
+<style>
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+
+</html>
