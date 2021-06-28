@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Banner Management</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Import CSS & JS from Bootstrap -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/custom.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="assets/css/banner.css" rel="stylesheet" />
 
     <!-- Include Jquery -->
     <script src="assets/js/jquery.js"></script>
 
     <style>
-      img:hover {
-        cursor: pointer;
-      }
+        img:hover {
+            cursor: pointer;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Navbar -->
     <nav class="site-header sticky-top py-1">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between"
-      >
-        <a class="py-2 d-none d-md-inline-block" href="video.html"
-          >Video Conference</a
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="video.html">Video Conference</a
         >
         <a class="py-2 d-none d-md-inline-block" href="Chat.html"
           >Text Messaging & File Sharing</a
@@ -91,6 +91,90 @@
           </div>
         </div>
       </div>
+
+  
+      <div class="row">
+        <button type="button" id="btn1" class="btn btn-primary col-lg-3 col-sm-3">Click to Toggle Image </button>
+        <button type="button" id="btn2" class="btn btn-success col-lg-3 col-sm-3">Click to fade out Image </button>
+        <button type="button" id="btn3" class="btn btn-info col-lg-3 col-sm-3">Click to Fade Toggle</button>
+      </div>
+  
+      <div class="row" style="margin-top: 10px;">
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail" id="Image1">
+            <img
+              src="https://images.unsplash.com/photo-1577045084962-532edf3417e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail" id="Image2">
+            <img
+              src="https://images.unsplash.com/photo-1618421141633-c962700dd5a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail" id="Image3">
+            <img
+              src="https://images.unsplash.com/photo-1582757135816-01e970d3cd18?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <button type="button" id="btn4" class="btn btn-primary col-lg-3 col-sm-3">MouseOver to see the magic</button>
+        <button type="button" id="btn5" class="btn btn-success col-lg-3 col-sm-3">Click to Toggle</button>
+        <button type="button" id="btn6" class="btn btn-info col-lg-3 col-sm-3">Click to Slide Toggle</button>
+      </div>
+  
+  
+      <div class="row" style="margin-top: 10px;">
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail" id="Image4">
+            <img
+              src="https://images.unsplash.com/photo-1603993097397-89c963e325c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail" id="Image5">
+            <img
+              src="https://images.unsplash.com/photo-1594612129911-d6903495cfe4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail" id="Image6">
+            <img
+              src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80">
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <button type="button" id="btn7" class="btn btn-primary col-lg-3 col-sm-3">Mouse Over to see the Image</button>
+        <button type="button" id="btn8" class="btn btn-success col-lg-3 col-sm-3">Mouse Over to see the Image</button>
+        <button type="button" id="btn9" class="btn btn-info col-lg-3 col-sm-3">Mouse Over to see the Image</button>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail" id="Image7" style="display: none;">
+            <img
+              src="https://images.unsplash.com/photo-1619602506066-e3e1bc4b5cee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail" id="Image8" style="display: none;">
+            <img
+              src="https://images.unsplash.com/photo-1507246207829-732ed643ea0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80">
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="thumbnail" id="Image9" style="display: none;">
+            <img
+              src="https://images.unsplash.com/photo-1607893467292-d32723a87a6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
 
     <!-- End of Conteng -->
@@ -104,63 +188,119 @@
         <p class="lead font-weight-normal">Prepared by Lotfi Arif</p>
         <p class="text-muted">
           <a href="index.html" class="btn btn-primary my-2">Back to Home</a>
-        </p>
-      </div>
-    </div>
-    <!-- End of Welcome Message -->
+            </p>
+        </div>
+        </div>
+        <!-- End of Welcome Message -->
 
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Web Technology</p>
-        <p>Lecturer Name : Assoc. Prof Dr Mohd Yazid Idris</p>
-      </div>
-    </footer>
-  </body>
+        <footer class="text-muted">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Back to top</a>
+                </p>
+                <p>Web Technology</p>
+                <p>Lecturer Name : Assoc. Prof Dr Mohd Yazid Idris</p>
+            </div>
+        </footer>
+</body>
 
-  <script>
-    $(document).ready(function () {
-      $("#main_banner").hover(
-        function () {
-          $(this).animate(
-            {
-              marginTop: "-=3%",
-            },
-            200
-          );
-        },
-
-        function () {
-          $(this).animate(
-            {
-              marginTop: "0%",
-            },
-            200
-          );
-        }
-      );
-
-      $("#second_banner").hover(
-        function () {
-          $(this).animate(
-            {
-              width: "+=5%",
-            },
-            200
-          );
-        },
-
-        function () {
-          $(this).animate(
-            {
-              width: "100%",
-            },
-            200
-          );
-        }
-      );
+<script>
+    //using jquerry
+    //1st Row
+    $(function() {
+        $('#btn1').on('click', function() {
+            $('#Image1').slideToggle(200);
+        });
     });
-  </script>
+
+    $(function() {
+        $('#btn2').on('click', function() {
+            $('#Image2').fadeOut();
+        });
+    });
+
+    $(function() {
+        $('#btn3').on('click', function() {
+            $('#Image3').fadeToggle();
+        });
+    });
+
+
+    //2nd Row
+    $(function() {
+        $('#btn4').on('mouseover', function() {
+            $('#Image4').fadeToggle();
+        });
+    });
+
+    $(function() {
+        $('#btn5').on('click', function() {
+            $('#Image5').toggle();
+        });
+    });
+
+    $(function() {
+        $('#btn6').on('click', function() {
+            $('#Image6').slideToggle(400);
+        });
+    });
+
+
+
+    //Third Row of Pictures 
+    $(function() {
+        $('#btn7').on('mouseover', function() {
+            $('#Image7').show();
+        });
+    });
+
+    $(function() {
+        $('#btn8').on('mouseover', function() {
+            $('#Image8').show();
+        });
+    });
+    $(function() {
+        $('#btn9').on('mouseover', function() {
+            $('#Image9').show();
+        });
+    });
+    $(document).ready(function() {
+        $("#main_banner").hover(
+            function() {
+                $(this).animate({
+                        marginTop: "-=3%",
+                    },
+                    200
+                );
+            },
+
+            function() {
+                $(this).animate({
+                        marginTop: "0%",
+                    },
+                    200
+                );
+            }
+        );
+
+        $("#second_banner").hover(
+            function() {
+                $(this).animate({
+                        width: "+=5%",
+                    },
+                    200
+                );
+            },
+
+            function() {
+                $(this).animate({
+                        width: "100%",
+                    },
+                    200
+                );
+            }
+        );
+    });
+</script>
+
 </html>
