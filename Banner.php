@@ -7,7 +7,7 @@ class Banner{
     public function __construct(){
         $servername ="db";
         $username ="root";
-        $password="password";
+        $password="Web.Tech123";
         $dbname="dev_profile";
 
 
