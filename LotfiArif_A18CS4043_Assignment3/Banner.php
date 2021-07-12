@@ -20,9 +20,9 @@ class Banner{
 		}
     }
 
-    //Get Banner Link
+    //Get banners Link
     public function getBannerLink(){
-        $sql = "select * FROM banner";
+        $sql = "select * FROM banners";
         $result = $this->conn->query($sql);
 
         $row = array();
@@ -40,7 +40,7 @@ class Banner{
         
         for ($j=0; $j<1; $j++){
             if($j==0){
-              $sql = "insert into banner (imageURL)".
+              $sql = "insert into banners (imageURL)".
               "values ('$img1')";
             }
             if($this->conn->query($sql) == TRUE){
