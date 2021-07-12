@@ -1,0 +1,24 @@
+.jumbotron {
+  border: 10px solid #003366;
+  width: 1300px;
+  margin: 0 auto;
+}
+body {
+  background-color: rgb(182, 181, 181);
+}
+
+.nav-link {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.box-part {
+  background: #fff;
+  border-radius: 0;
+  padding: 60px 10px;
+  margin: 30px 0px;
+}
+
+.fa-pull-right {
+  margin: -100px -5px;
+  color: black;
+}
