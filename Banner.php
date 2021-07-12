@@ -40,7 +40,7 @@ class Banner{
         
         for ($j=0; $j<1; $j++){
             if($j==0){
-              $sql = "insert into banner (imageLink)".
+              $sql = "insert into banner (imageURL)".
               "values ('$img1')";
             }
             if($this->conn->query($sql) == TRUE){

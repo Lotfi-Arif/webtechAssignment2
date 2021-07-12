@@ -108,17 +108,17 @@
             success: (resultsJSON) => {
 
                 var i = 0;
-                var imageLink = new Array();
+                var imageURL = new Array();
 
                 resultsJSON.map(image => {
-                    $('#insertData').append('<tr><td style="color: black; ">' + image.id + '</td>' + '<td style="color: black; ">' + image.imageLink + '</td></tr>');
-                    imageLink[i] = image.imageLink;
+                    $('#insertData').append('<tr><td style="color: black; ">' + image.id + '</td>' + '<td style="color: black; ">' + image.imageURL + '</td></tr>');
+                    imageURL[i] = image.imageURL;
                     i++;
                 });
 
 
                 for (i = 0; i < 3; i++) {
-                    $('#img_1').attr('src', imageLink[imageLink.length - 1]);
+                    $('#img_1').attr('src', imageURL[imageURL.length - 1]);
                 }
 
             },
