@@ -76,7 +76,7 @@
             alert("Please add a banner link");
         } else {
             $.ajax({
-                url: "BannerRestController.php?action=id",
+                url: "BannerRestController.php?action=insert",
                 method: "POST",
                 data: JSON.stringify(links),
                 dataType: "json",
